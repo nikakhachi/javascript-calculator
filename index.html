@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://www.pinclipart.com/picdir/big/31-317638_calculator-clipart-vector-png-please-contact-icon-transparent.png">
+</head>
+<body>
+    <div id='container-fluid'>
+        <div id='display'>
+            <div id='display-equation'>0</div>
+            <div id='display-equals'></div>
+        </div>
+        
+                <button id='seven' class='btn' onClick='updateDisplay(7)'>7</button>
+                <button id='eight' class='btn' onClick='updateDisplay(8)'>8</button>
+                <button id='nine' class='btn' onClick='updateDisplay(9)'>9</button>
+                <button id='subtract' class='btn' onClick='updateDisplay("subtract")'>-</button>
+                <button id='four' class='btn' onClick='updateDisplay(4)'>4</button>
+                <button id='five' class='btn' onClick='updateDisplay(5)'>5</button>
+                <button id='six' class='btn' onClick='updateDisplay(6)'>6</button>
+                <button id='add' class='btn' onClick='updateDisplay("add")'>+</button>
+                <button id='one' class='btn' onClick='updateDisplay(1)'>1</button>
+                <button id='two' class='btn' onClick='updateDisplay(2)'>2</button>
+                <button id='three' class='btn' onClick='updateDisplay(3)'>3</button>
+                <button id='equals' class='btn' onClick='updateDisplay("equals")'>=</button>
+                <button id='zero' class='btn' onClick='updateDisplay(0)'>0</button>
+                <button id='multiply' class='btn' onClick='updateDisplay("multiply")'>x</button>
+                <button id='divide' class='btn' onClick='updateDisplay("divide")'>/</button>
+                <button id='decimal' class='btn' onClick='updateDisplay("decimal")'>.</button>
+                <button id='clear' class='btn' onClick='clearDisplay()'>AC</button>
+    </div>
+    <script src='/main.js'></script>
+</body>
+</html>
