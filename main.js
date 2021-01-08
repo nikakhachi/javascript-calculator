@@ -101,10 +101,12 @@ function updateDisplay(param){
     ///////
     ///////
     ///////
+    // If "add" operator is triggered and last symbol of equation isn't operator, "+" symbol will be added to equation
     if(param == 'add' && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
         display.innerText += '+';
         enterDecimal = true;
     }
+    // If "subtract" operator is triggered and last 2 symbols of equation aren't operators, "-" symbol will be added to equation
     if(param == 'subtract'){
             if(display.innerText == 0){
             display.innerText = '-';
@@ -121,16 +123,18 @@ function updateDisplay(param){
             }
             enterDecimal = true;
     }
+    // If "multiply" operator is triggered and last symbol of equation isn't operator, "x" symbol will be added to equation
     if(param == 'multiply'  && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
         display.innerText += 'x';
         enterDecimal = true;
     }
+    // If "divide" operator is triggered and last symbol of equation isn't operator, "/" symbol will be added to equation
     if(param == 'divide'  && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
         display.innerText += '/';
         enterDecimal = true;
     }
     if(param == 'decimal' && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
-        if(enterDecimal && display.innerText[display.innerText.length - 1] != '.' && display.innerText[display.innerText.length - 2] != '.' && display.innerText[display.innerText.length - 3] != '.'){
+        if(enterDecimal){
            display.innerText += '.';
         }
         enterDecimal = false;
