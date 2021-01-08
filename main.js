@@ -133,10 +133,9 @@ function updateDisplay(param){
         display.innerText += '/';
         enterDecimal = true;
     }
-    if(param == 'decimal' && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
-        if(enterDecimal){
-           display.innerText += '.';
-        }
+    // If decimal button is pressed, dot is added to equation. (if last number of equation already has a dot, it won't be added)
+    if(param == 'decimal' && enterDecimal){
+        display.innerText += '.';
         enterDecimal = false;
     }
     if(param == 'equals' && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
