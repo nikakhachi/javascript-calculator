@@ -138,6 +138,7 @@ function updateDisplay(param){
         display.innerText += '.';
         enterDecimal = false;
     }
+    // Equation is summed up and displayed on the screen. Sum won't be calculated if last symbol of equation is arithmetical operator.
     if(param == 'equals' && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
         let string = display.innerText;
         let numArray = string.split(/[\+\-\x\/]/).filter (item => item != '');
