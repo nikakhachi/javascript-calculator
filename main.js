@@ -61,6 +61,7 @@ window.onkeydown = function(e){
         case 'c':
             clearDisplay();
             break;
+        // 'Backspace' removes the last symbol of equation
         case 'Backspace':
             if(display.innerText != 0){
                 let displayText = display.innerText;
@@ -81,6 +82,9 @@ window.onkeydown = function(e){
 
 
 function updateDisplay(param){
+    // If sum of equation is displayed and any button is triggered, sum disappears
+    // If sum of equation is displayed and number button is triggered, latest equation also disappears and new equation will start with the number, that's button is pressed
+    // If sum of equation is displayed and arithmetic operator is triggered, latest sum moves into equation place, and the operator is added to it
     if(displayEq.innerText != '' && param != 'equals'){
         display.innerText = displayEq.innerText;
         displayEq.innerText = '';
@@ -94,6 +98,9 @@ function updateDisplay(param){
     }
     display.innerText += param;
     }
+    ///////
+    ///////
+    ///////
     if(param == 'add' && !isNaN(parseFloat(display.innerText[display.innerText.length - 1]))){
         display.innerText += '+';
         enterDecimal = true;
