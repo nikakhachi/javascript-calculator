@@ -167,7 +167,13 @@ function updateDisplay(param){
                 result /= parseFloat(numArray[i+1]);
             }
         }
-        displayEq.innerText = result;
+        let highest = 0;
+        numArray.filter(num => num % 2 != 0 && num % 2 != 1).forEach(num => {
+            if(num.slice(num.indexOf('.') + 1).length > highest){
+                highest = num.slice(num.indexOf('.') + 1).length
+            };
+        })
+        displayEq.innerText = result.toFixed(highest);
         enterDecimal = true;
     }
 }
