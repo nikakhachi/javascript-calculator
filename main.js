@@ -153,8 +153,8 @@ function updateDisplay(param){
             eqArray.shift();
             numArray[0] = '-' + numArray[0];
         }
-        console.log(eqArray);
-        console.log(numArray);
+//         console.log(eqArray);
+//         console.log(numArray);
         let result = parseFloat(numArray[0]);
         for(let i = 0; i < eqArray.length; i++){
             if(eqArray[i] == "+"){
